@@ -12,13 +12,8 @@ with open('input2.txt') as inf:
 max = 0
 max_w = ''
 for k in d.keys():
-    if d[k] >= max:
+    if d[k] > max or d[k] == max and k < max_w:
         max = d[k]
         max_w = k
-
-for k in d.keys():
-    if d[k] == max:
-        if k < max_w:
-            max_w = k
 
 print(max_w, max)
